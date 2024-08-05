@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn CSS</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+          body {
+            background-color: #081b29;
+            color: white;
+            font-family: Arial, sans-serif;
+            padding: 40px;
+        }
+        h1, h2 {
+            text-align: center;
+        }
+        p, ul, ol, dl {
+            line-height: 3;
+        }
+        pre {
+            background-color: black;
+            padding: 10px;
+            border-radius: 10px;
+            overflow-x: auto;
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>CSS (Cascading Style Sheets)</h1>
+    </header>
+    <main>
+        <section>
+            <h2>1. CSS Basics</h2>
+            <h3>Inline, Internal, and External CSS</h3>
+            <h4>Inline CSS</h4>
+            <pre><code>
+&lt;p style="color: red;"&gt;This is a red paragraph.&lt;/p&gt;
+            </code></pre>
+            <p><strong>style attribute:</strong> Adds CSS directly within an HTML element.</p>
+            <h4>Internal CSS</h4>
+            <pre><code>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Internal CSS&lt;/title&gt;
+    &lt;style&gt;
+        p {
+            color: blue;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;p&gt;This is a blue paragraph.&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+            </code></pre>
+            <p><strong>&lt;style&gt; tag:</strong> Contains CSS within the &lt;head&gt; section.</p>
+            <h4>External CSS</h4>
+            <pre><code>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;External CSS&lt;/title&gt;
+    &lt;link rel="stylesheet" href="styles.css"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;p&gt;This is a styled paragraph.&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+            </code></pre>
+            <pre><code>
+/* styles.css */
+p {
+    color: green;
+}
+            </code></pre>
+            <p><strong>&lt;link&gt; tag:</strong> Links to an external CSS file.</p>
+        </section>
+
+        <section>
+            <h2>2. Selectors</h2>
+            <h3>Element, ID, Class, and Attribute Selectors</h3>
+            <h4>Element Selector</h4>
+            <pre><code>
+p {
+    color: black;
+}
+            </code></pre>
+            <p><strong>Element Selector:</strong> Targets all &lt;p&gt; elements.</p>
+            <h4>ID Selector</h4>
+            <pre><code>
+#unique {
+    color: orange;
+}
+&lt;p id="unique"&gt;This is an orange paragraph.&lt;/p&gt;
+            </code></pre>
+            <p><strong>ID Selector:</strong> Targets an element with a specific ID.</p>
+            <h4>Class Selector</h4>
+            <pre><code>
+.special {
+    color: purple;
+}
+&lt;p class="special"&gt;This is a purple paragraph.&lt;/p&gt;
+            </code></pre>
+            <p><strong>Class Selector:</strong> Targets elements with a specific class.</p>
+            <h4>Attribute Selector</h4>
+            <pre><code>
+a[target="_blank"] {
+    color: red;
+}
+&lt;a href="https://example.com" target="_blank"&gt;External Link&lt;/a&gt;
+            </code></pre>
+            <p><strong>Attribute Selector:</strong> Targets elements with a specific attribute and value.</p>
+        </section>
+
+        <section>
+            <h2>3. Colors and Backgrounds</h2>
+            <h3>Color Properties</h3>
+            <h4>Color Names and Hex Codes</h4>
+            <pre><code>
+p {
+    color: red; /* Color name */
+    color: #ff0000; /* Hex code */
+}
+            </code></pre>
+            <p><strong>color:</strong> Sets the text color.</p>
+            <h4>RGB and RGBA</h4>
+            <pre><code>
+p {
+    color: rgb(255, 0, 0); /* RGB */
+    color: rgba(255, 0, 0, 0.5); /* RGBA with transparency */
+}
+            </code></pre>
+            <h3>Background Properties</h3>
+            <h4>Background Color and Image</h4>
+            <pre><code>
+body {
+    background-color: lightblue;
+    background-image: url('background.jpg');
+}
+            </code></pre>
+            <p><strong>background-color:</strong> Sets the background color.</p>
+            <p><strong>background-image:</strong> Sets the background image.</p>
+            <h4>Background Position, Size, and Repeat</h4>
+            <pre><code>
+body {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+            </code></pre>
+            <p><strong>background-position:</strong> Sets the starting position of the background image.</p>
+            <p><strong>background-size:</strong> Resizes the background image.</p>
+            <p><strong>background-repeat:</strong> Controls the repetition of the background image.</p>
+        </section>
+
+        <section>
+            <h2>4. Box Model</h2>
+            <h3>Margins, Padding, Borders, and Content</h3>
+            <h4>Box Model Structure</h4>
+            <pre><code>
+div {
+    width: 300px;
+    padding: 20px;
+    border: 5px solid black;
+    margin: 10px;
+}
+            </code></pre>
+            <p><strong>width:</strong> Width of the content area.</p>
+            <p><strong>padding:</strong> Space between content and border.</p>
+            <p><strong>border:</strong> Border around the element.</p>
+            <p><strong>margin:</strong> Space outside the border.</p>
+            <h4>Box Sizing</h4>
+            <pre><code>
+div {
+    box-sizing: border-box;
+}
+            </code></pre>
+            <p><strong>box-sizing:</strong> Controls how the total width and height of an element is calculated.</p>
+        </section>
+
+        <section>
+            <h2>5. Text Styling</h2>
+            <h3>Font Properties</h3>
+            <h4>Font Family, Size, and Style</h4>
+            <pre><code>
+p {
+    font-family: 'Arial', sans-serif;
+    font-size: 16px;
+    font-style: italic;
+}
+            </code></pre>
+            <p><strong>font-family:</strong> Sets the font family.</p>
+            <p><strong>font-size:</strong> Sets the font size.</p>
+            <p><strong>font-style:</strong> Sets the font style (e.g., normal, italic).</p>
+            <h4>Font Weight and Line Height</h4>
+            <pre><code>
+p {
+    font-weight: bold;
+    line-height: 1.5;
+}
+            </code></pre>
+            <p><strong>font-weight:</strong> Sets the weight (boldness) of the font.</p>
+            <p><strong>line-height:</strong> Sets the space between lines of text.</p>
+            <h3>Text Alignment, Decoration, and Transform</h3>
+            <h4>Text Alignment and Decoration</h4>
+            <pre><code>
+p {
+    text-align: center;
+    text-decoration: underline;
+}
+            </code></pre>
+            <p><strong>text-align:</strong> Sets the horizontal alignment of text.</p>
+            <p><strong>text-decoration:</strong> Adds decoration to text (e.g., underline, overline, line-through).</p>
+            <h4>Text Transform</h4>
+            <pre><code>
+p {
+    text-transform: uppercase;
+}
+            </code></pre>
+            <p><strong>text-transform:</strong> Controls the capitalization of text.</p>
+        </section>
+
+        <section>
+            <h2>6. Layouts</h2>
+            <h3>Display Property</h3>
+            <h4>Block, Inline, and Inline-Block</h4>
+            <pre><code>
+div {
+    display: block;
+}
+span {
+    display: inline;
+}
+img {
+    display: inline-block;
+}
+            </code></pre>
+            <p><strong>display:</strong> Controls the display behavior of an element.</p>
+            <h3>Positioning</h3>
+            <h4>Static, Relative, Absolute, Fixed, and Sticky</h4>
+            <pre><code>
+div {
+    position: static; /* Default */
+}
+.relative {
+    position: relative;
+    top: 10px;
+    left: 10px;
+}
+.absolute {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+.fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+.sticky {
+    position: sticky;
+    top: 0;
+}
+            </code></pre>
+            <p><strong>position:</strong> Specifies the type of positioning method used for an element.</p>
+            <h3>Flexbox</h3>
+            <h4>Flex Container and Items</h4>
+            <pre><code>
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.item {
+    flex: 1;
+    padding: 10px;
+    background-color: lightgrey;
+}
+            </code></pre>
+            <p><strong>display: flex:</strong> Defines a flex container.</p>
+            <p><strong>justify-content:</strong> Aligns items horizontally.</p>
+            <p><strong>align-items:</strong> Aligns items vertically.</p>
+            <p><strong>flex:</strong> Defines the flex grow, shrink, and basis properties of a flex item.</p>
+            <h3>Grid Layout</h3>
+            <h4>Grid Container and Items</h4>
+            <pre><code>
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+}
+.item {
+    background-color: lightgrey;
+    padding: 20px;
+}
+            </code></pre>
+            <p><strong>display: grid:</strong> Defines a grid container.</p>
+            <p><strong>grid-template-columns:</strong> Defines the columns of the grid.</p>
+            <p><strong>grid-gap:</strong> Sets the gap between grid items.</p>
+        </section>
+
+        <section>
+            <h2>7. Responsive Design</h2>
+            <h3>Media Queries</h3>
+            <h4>Basic Media Query</h4>
+            <pre><code>
+@media (max-width: 600px) {
+    body {
+        background-color: lightcoral;
+    }
+}
+            </code></pre>
+            <p><strong>@media:</strong> Applies styles based on specific conditions (e.g., screen size).</p>
+            <h4>Responsive Font Sizes</h4>
+            <pre><code>
+body {
+    font-size: 16px;
+}
+@media (max-width: 600px) {
+    body {
+        font-size: 14px;
+}
+            </code></pre>
+            <p>Adjusts font size based on screen size.</p>
+        </section>
+
+        <section>
+            <h2>8. CSS Animations and Transitions</h2>
+            <h3>Transitions</h3>
+            <h4>Basic Transition</h4>
+            <pre><code>
+div {
+    transition: background-color 0.5s ease;
+}
+div:hover {
+    background-color: lightblue;
+}
+            </code></pre>
+            <p><strong>transition:</strong> Adds transition effects to elements.</p>
+            <h3>Animations</h3>
+            <h4>Keyframes and Animation</h4>
+            <pre><code>
+@keyframes slidein {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+div {
+    animation: slidein 2s forwards;
+}
+            </code></pre>
+            <p><strong>@keyframes:</strong> Defines the animation.</p>
+            <p><strong>animation:</strong> Applies the animation to an element.</p>
+        </section>
+
+        <section>
+            <h2>9. Pseudo-classes and Pseudo-elements</h2>
+            <h3>Pseudo-classes</h3>
+            <h4>Hover, Focus, and Active</h4>
+            <pre><code>
+a:hover {
+    color: red;
+}
+input:focus {
+    border-color: blue;
+}
+button:active {
+    background-color: green;
+}
+            </code></pre>
+            <p><strong>:hover:</strong> Applies styles when the element is hovered.</p>
+            <p><strong>:focus:</strong> Applies styles when the element is focused.</p>
+            <p><strong>:active:</strong> Applies styles when the element is active.</p>
+            <h3>Pseudo-elements</h3>
+            <h4>Before and After</h4>
+            <pre><code>
+p::before {
+    content: "Note: ";
+    font-weight: bold;
+}
+p::after {
+    content: " - End of note.";
+    font-weight: bold;
+}
+            </code></pre>
+            <p><strong>::before:</strong> Inserts content before an element.</p>
+            <p><strong>::after:</strong> Inserts content after an element.</p>
+        </section>
+
+        <section>
+            <h2>10. CSS Variables</h2>
+            <h3>Defining and Using Variables</h3>
+            <pre><code>
+:root {
+    --primary-color: #3498db;
+    --secondary-color: #2ecc71;
+}
+body {
+    color: var(--primary-color);
+}
+h1 {
+    color: var(--secondary-color);
+}
+            </code></pre>
+            <p><strong>--variable-name:</strong> Defines a custom property (variable).</p>
+            <p><strong>var(--variable-name):</strong> References the variable.</p>
+        </section>
+    </main>
+</body>
+</html>

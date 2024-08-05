@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Tutorial</title>
+    <style>
+        body {
+            background-color: #081b29;
+            color: white;
+            font-family: Arial, sans-serif;
+            padding: 40px;
+        }
+        h1, h2 {
+            text-align: center;
+        }
+        p, ul, ol, dl {
+            line-height: 1.6;
+        }
+        pre {
+            background-color: black;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>JavaScript Tutorial</h1>
+    </header>
+
+    <main>
+        <section>
+            <h2>1. Introduction to JavaScript</h2>
+            <p>JavaScript is a versatile, high-level programming language used primarily for web development. It can be used to create interactive effects within web browsers.</p>
+        </section>
+
+        <section>
+            <h2>2. Basic Syntax and Statements</h2>
+            <h3>Variables</h3>
+            <pre><code class="language-javascript">
+let name = "John"; // Block-scoped variable
+const age = 30; // Constant variable
+var city = "New York"; // Function-scoped variable
+            </code></pre>
+
+            <h3>Data Types</h3>
+            <pre><code class="language-javascript">
+let number = 25; // Number
+let string = "Hello"; // String
+let boolean = true; // Boolean
+let array = [1, 2, 3]; // Array
+let object = { name: "John", age: 30 }; // Object
+let nullValue = null; // Null
+let undefinedValue; // Undefined
+            </code></pre>
+
+            <h3>Comments</h3>
+            <pre><code class="language-javascript">
+// Single-line comment
+/*
+  Multi-line comment
+*/
+            </code></pre>
+        </section>
+
+        <section>
+            <h2>3. Operators</h2>
+            <h3>Arithmetic Operators</h3>
+            <pre><code class="language-javascript">
+let sum = 10 + 5; // Addition
+let difference = 10 - 5; // Subtraction
+let product = 10 * 5; // Multiplication
+let quotient = 10 / 5; // Division
+let remainder = 10 % 3; // Modulus
+let exponent = 2 ** 3; // Exponentiation
+            </code></pre>
+
+            <h3>Assignment Operators</h3>
+            <pre><code class="language-javascript">
+let x = 10;
+x += 5; // Equivalent to x = x + 5
+x -= 5; // Equivalent to x = x - 5
+x *= 5; // Equivalent to x = x * 5
+x /= 5; // Equivalent to x = x / 5
+x %= 5; // Equivalent to x = x % 5
+x **= 2; // Equivalent to x = x ** 2
+            </code></pre>
+
+            <h3>Comparison Operators</h3>
+            <pre><code class="language-javascript">
+let isEqual = 10 == "10"; // true (loose equality)
+let isStrictEqual = 10 === "10"; // false (strict equality)
+let isNotEqual = 10 != "10"; // false (loose inequality)
+let isStrictNotEqual = 10 !== "10"; // true (strict inequality)
+let isGreaterThan = 10 > 5; // true
+let isLessThan = 10 < 15; // true
+let isGreaterThanOrEqual = 10 >= 10; // true
+let isLessThanOrEqual = 10 <= 5; // false
+            </code></pre>
+
+            <h3>Logical Operators</h3>
+            <pre><code class="language-javascript">
+let and = true && false; // false
+let or = true || false; // true
+let not = !true; // false
+            </code></pre>
+        </section>
+
+        <section>
+            <h2>4. Control Structures</h2>
+            <h3>Conditional Statements</h3>
+            <pre><code class="language-javascript">
+let age = 18;
+if (age >= 18) {
+    console.log("Adult");
+} else {
+    console.log("Minor");
+}
+            </code></pre>
+
+            <h3>Switch Statement</h3>
+            <pre><code class="language-javascript">
+let day = "Monday";
+switch (day) {
+    case "Monday":
+        console.log("Start of the week");
+        break;
+    case "Friday":
+        console.log("End of the week");
+        break;
+    default:
+        console.log("Midweek");
+}
+            </code></pre>
+
+            <h3>Loops</h3>
+            <h4>For Loop</h4>
+            <pre><code class="language-javascript">
+for (let i = 0; i < 5; i++) {
+    console.log(i);
+}
+            </code></pre>
+
+            <h4>While Loop</h4>
+            <pre><code class="language-javascript">
+let i = 0;
+while (i < 5) {
+    console.log(i);
+    i++;
+}
+            </code></pre>
+
+            <h4>Do-While Loop</h4>
+            <pre><code class="language-javascript">
+let j = 0;
+do {
+    console.log(j);
+    j++;
+} while (j < 5);
+            </code></pre>
+        </section>
+
+        <section>
+            <h2>5. Functions</h2>
+            <h3>Function Declaration</h3>
+            <pre><code class="language-javascript">
+function greet(name) {
+    return "Hello, " + name;
+}
+console.log(greet("John"));
+            </code></pre>
+
+            <h3>Function Expression</h3>
+            <pre><code class="language-javascript">
+const greet = function(name) {
+    return "Hello, " + name;
+};
+console.log(greet("John"));
+            </code></pre>
+
+            <h3>Arrow Function</h3>
+            <pre><code class="language-javascript">
+const greet = (name) => "Hello, " + name;
+console.log(greet("John"));
+            </code></pre>
+        </section>
+
+        <section>
+            <h2>6. Objects and Arrays</h2>
+            <h3>Objects</h3>
+            <h4>Creating and Accessing Objects</h4>
+            <pre><code class="language-javascript">
+let person = {
+    name: "John",
+    age: 30,
+    city: "New York"
+};
+console.log(person.name); // Accessing property
+console.log(person["age"]); // Accessing property using bracket notation
+            </code></pre>
+
+            <h4>Adding and Deleting Properties</h4>
+            <pre><code class="language-javascript">
+person.country = "USA"; // Adding property
+delete person.city; // Deleting property
+            </code></pre>
+
+            <h3>Arrays</h3>
+            <h4>Creating and Accessing Arrays</h4>
+            <pre><code class="language-javascript">
+let fruits = ["Apple", "Banana", "Cherry"];
+console.log(fruits[0]); // Accessing array element
+            </code></pre>
+
+            <h4>Array Methods</h4>
+            <pre><code class="language-javascript">
+fruits.push("Orange"); // Adds an element to the end
+fruits.pop(); // Removes the last element
+fruits.shift(); // Removes the first element
+fruits.unshift("Mango"); // Adds an element to the beginning
+console.log(fruits.length); // Gets the length of the array
+            </code></pre>
+        </section>
+
+        <section>
+            <h2>7. ES6 Features</h2>
+            <h3>Let and Const</h3>
+            <pre><code class="language-javascript">
+let name = "John"; // Block-scoped variable
+const age = 30; // Constant variable
+            </code></pre>
+
+            <h3>Template Literals</h3>
+            <pre><code class="language-javascript">
+let name = "John";
+let greeting = `Hello, ${name}`;
+console.log(greeting);
+            </code></pre>
+
+            <h3>Destructuring</h3>
+            <h4>Array Destructuring</h4>
+            <pre><code class="language-javascript">
+let [a, b, c] = [1, 2, 3];
+console.log(a, b, c);
+            </code></pre>
+
+            <h4>Object Destructuring</h4>
+            <pre><code class="language-javascript">
+let person = { name: "John", age: 30 };
+let { name, age } = person;
+console.log(name, age);
+            </code></pre>
+
+            <h3>Default Parameters</h3>
+            <pre><code class="language-javascript">
+function greet(name = "Guest") {
+    return `Hello, ${name}`;
+}
+console.log(greet()); // Hello, Guest
+console.log(greet("John")); // Hello, John
+            </code></pre>
+
+            <h3>Rest and Spread</h3>
+            <h4>Rest Parameters</h4>
+            <pre><code class="language-javascript">
+function sum(...numbers) {
+    return numbers.reduce((acc, num) => acc + num, 0);
+}
+console.log(sum(1, 2, 3, 4)); // 10
+            </code></pre>
+
+            <h4>Spread Operator</h4>
+            <pre><code class="language-javascript">
+let arr1 = [1, 2, 3];
+let arr2 = [...arr1, 4, 5, 6];
+console.log(arr2); // [1, 2, 3, 4, 5, 6]
+            </code></pre>
+        </section>
+
+        <section>
+            <h2>8. DOM Manipulation</h2>
+            <h3>Selecting Elements</h3>
+            <h4>By ID</h4>
+            <pre><code class="language-javascript">
+let element = document.getElementById("myElement");
+            </code></pre>
+
+            <h4>By Class</h4>
+            <pre><code class="language-javascript">
+let elements = document.getElementsByClassName("myClass");
+            </code></pre>
+
+            <h4>By Tag</h4>
+            <pre><code class="language-javascript">
+let elements = document.getElementsByTagName("div");
+            </code></pre>
+
+            <h4>By Query Selector</h4>
+            <pre><code class="language-javascript">
+let element = document.querySelector("#myElement");
+let elements = document.querySelectorAll(".myClass");
+            </code></pre>
+
+            <h3>Changing Content and Attributes</h3>
+            <h4>Changing Content</h4>
+            <pre><code class="language-javascript">
+let element = document.getElementById("myElement");
+element.textContent = "New Content";
+element.innerHTML = "<strong>Bold Content</strong>";
+            </code></pre>
+
+            <h4>Changing Attributes</h4>
+            <pre><code class="language-javascript">
+let image = document.getElementById("myImage");
+image.src = "newImage.jpg";
+image.alt = "New Image";
+            </code></pre>
+
+            <h3>Event Listeners</h3>
+            <pre><code class="language-javascript">
+let button = document.getElementById("myButton");
+button.addEventListener("click", function() {
+    alert("Button Clicked!");
+});
+            </code></pre>
+        </section>
+
+        <section>
+            <h2>9. Events</h2>
+            <h3>Common Events</h3>
+            <pre><code class="language-javascript">
+let input = document.getElementById("myInput");
+
+input.addEventListener("focus", function() {
+    console.log("Input focused");
+});
+
+input.addEventListener("blur", function() {
+    console.log("Input lost focus");
+});
+
+input.addEventListener("change", function() {
+    console.log("Input changed");
+});
+            </code></pre>
+
+            <h3>Event Object</h3>
+            <pre><code class="language-javascript">
+document.addEventListener("click", function(event) {
+    console.log(event.target); // The clicked element
+    console.log(event.type); // Event type (click)
+});
+            </code></pre>
+        </section>
+
+        <section>
+            <h2>10. Asynchronous JavaScript</h2>
+            <h3>Callbacks</h3>
+            <pre><code class="language-javascript">
+function fetchData(callback) {
+    setTimeout(function() {
+        callback("Data fetched");
+    }, 2000);
+}
+
+fetchData(function(data) {
+    console.log(data);
+});
+            </code></pre>
+
+            <h3>Promises</h3>
+            <pre><code class="language-javascript">
+let promise = new Promise(function(resolve, reject) {
+    let success = true;
+    if (success) {
+        resolve("Promise resolved");
+    } else {
+        reject("Promise rejected");
+    }
+});
+
+promise.then(function(result) {
+    console.log(result);
+}).catch(function(error) {
+    console.log(error);
+});
+            </code></pre>
+
+            <h3>Async/Await</h3>
+            <pre><code class="language-javascript">
+async function fetchData() {
+    let promise = new Promise((resolve, reject) => {
+        setTimeout(() => resolve("Data fetched"), 2000);
+    });
+
+    let result = await promise; // Waits for the promise to resolve
+    console.log(result);
+}
+
+fetchData();
+            </code></pre>
+        </section>
+
+        <section>
+            <h2>11. Error Handling</h2>
+            <h3>Try, Catch, and Finally</h3>
+            <pre><code class="language-javascript">
+try {
+    let result = riskyOperation();
+    console.log(result);
+} catch (error) {
+    console.error("An error occurred:", error);
+} finally {
+    console.log("Operation completed");
+}
+            </code></pre>
+
+            <h3>Throwing Errors</h3>
+            <pre><code class="language-javascript">
+function checkAge(age) {
+    if (age < 18) {
+        throw new Error("Must be 18 or older");
+    }
+    return true;
+}
+
+try {
+    checkAge(16);
+} catch (error) {
+    console.error(error.message);
+}
+            </code></pre>
+        </section>
+
+        <section>
+            <h2>12. Modules</h2>
+            <h3>Export and Import</h3>
+            <h4>Exporting</h4>
+            <pre><code class="language-javascript">
+// file: module.js
+export let name = "John";
+export function greet() {
+    return "Hello";
+}
+            </code></pre>
+
+            <h4>Importing</h4>
+            <pre><code class="language-javascript">
+// file: main.js
+import { name, greet } from './module.js';
+console.log(name); // John
+console.log(greet()); // Hello
+            </code></pre>
+
+            <h3>Default Exports</h3>
+            <h4>Exporting Default</h4>
+            <pre><code class="language-javascript">
+// file: module.js
+export default function() {
+    return "Default Export";
+}
+            </code></pre>
+
+            <h4>Importing Default</h4>
+            <pre><code class="language-javascript">
+// file: main.js
+import myFunction from './module.js';
+console.log(myFunction()); // Default Export
+            </code></pre>
+        </section>
+    </main>
+
+    <script>
+        // You can add your JavaScript code here for live examples
+    </script>
+</body>
+</html>

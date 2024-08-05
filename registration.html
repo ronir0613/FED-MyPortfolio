@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Register</h2>
+        <form action="process_register.php" method="post" id="registerForm">
+            <div class="form-group">
+                <label for="firstname">First Name:</label>
+                <input type="text" id="firstname" name="firstname" required>
+            </div>
+            <div class="form-group">
+                <label for="lastname">Last Name:</label>
+                <input type="text" id="lastname" name="lastname" required>
+            </div>
+            <div class="form-group">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <input type="submit" value="Register">
+        </form>
+        <div id="errorMessage" class="error-message" style="display:none;"></div>
+    </div>
+
+    <script>
+        // JavaScript validation
+        document.getElementById('registerForm').addEventListener('submit', function(event) {
+            const firstName = document.getElementById('firstname').value;
+            const lastName = document.getElementById('lastname').value;
+            const email = document.getElementById('email').value;
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+            const errorMessage = document.getElementById('errorMessage');
+
+            const nameRegex = /^[A-Za-z]+$/;
+            const usernameRegex = /^[A-Za-z0-9]{8}$/;
+            const passwordRegex = /^(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^\&*\)\(+=._-]).{8,}$/;
+
+            let messages = [];
+
+            if (!nameRegex.test(firstName)) {
+                messages.push('First name should only consist of alphabets with no spaces.');
+            }
+
+            if (!nameRegex.test(lastName)) {
+                messages.push('Last name should only consist of alphabets with no spaces.');
+            }
+
+            if (!email.includes('@') || !email.includes('.')) {
+                messages.push('Email should exist in the real world.');
+            }
+
+            if (!usernameRegex.test(username)) {
+                messages.push('Username should be 8 characters long and consist of only alphabets and digits 0-9.');
+            }
+
+            if (!passwordRegex.test(password)) {
+                messages.push('Password should be at least 8 characters long with at least one capital letter, one special character, and one digit.');
+            }
+
+            if (messages.length > 0) {
+                errorMessage.innerHTML = messages.join('<br>');
+                errorMessage.style.display = 'block';
+                event.preventDefault();
+            } else {
+                errorMessage.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html>

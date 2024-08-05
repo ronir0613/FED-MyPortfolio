@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn HTML</title>
+    <style>
+        body {
+            background-color: #081b29;
+            color: white;
+            font-family: Arial, sans-serif;
+            padding: 40px;
+        }
+        h1, h2 {
+            text-align: center;
+        }
+        p, ul, ol, dl {
+            line-height: 1.6;
+        }
+        pre {
+            background-color: black;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>Learn HTML</h1>
+    <p>HTML (HyperText Markup Language)</p>
+
+    <h2>1. HTML Basics</h2>
+    <h3>Structure of an HTML Document</h3>
+    <pre>
+        &lt;!DOCTYPE html&gt;
+        &lt;html lang="en"&gt;
+        &lt;head&gt;
+            &lt;meta charset="UTF-8"&gt;
+            &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+            &lt;title&gt;Document Title&lt;/title&gt;
+        &lt;/head&gt;
+        &lt;body&gt;
+            &lt;header&gt;
+                &lt;h1&gt;Main Heading&lt;/h1&gt;
+            &lt;/header&gt;
+            &lt;main&gt;
+                &lt;section&gt;
+                    &lt;h2&gt;Section Heading&lt;/h2&gt;
+                    &lt;p&gt;Paragraph text here.&lt;/p&gt;
+                &lt;/section&gt;
+            &lt;/main&gt;
+            &lt;footer&gt;
+                &lt;p&gt;Footer content here.&lt;/p&gt;
+            &lt;/footer&gt;
+        &lt;/body&gt;
+        &lt;/html&gt;
+    </pre>
+    <ul>
+        <li>&lt;!DOCTYPE html&gt;: Declares the document type and HTML version.</li>
+        <li>&lt;html&gt;: Root element of an HTML page.</li>
+        <li>&lt;head&gt;: Contains meta-information about the document (e.g., charset, title, links to CSS).</li>
+        <li>&lt;body&gt;: Contains the visible content of the document.</li>
+    </ul>
+
+    <h2>2. Text Elements</h2>
+    <h3>Headings and Paragraphs</h3>
+    <pre>
+        &lt;h1&gt;Main Heading&lt;/h1&gt;
+        &lt;h2&gt;Subheading&lt;/h2&gt;
+        &lt;p&gt;This is a paragraph of text.&lt;/p&gt;
+    </pre>
+    <ul>
+        <li>&lt;h1&gt; to &lt;h6&gt;: Defines HTML headings, &lt;h1&gt; is the most important, &lt;h6&gt; is the least important.</li>
+        <li>&lt;p&gt;: Defines a paragraph.</li>
+    </ul>
+
+    <h3>Inline Text Elements</h3>
+    <pre>
+        &lt;strong&gt;Bold text&lt;/strong&gt;
+        &lt;em&gt;Italicized text&lt;/em&gt;
+        &lt;mark&gt;Highlighted text&lt;/mark&gt;
+        &lt;small&gt;Smaller text&lt;/small&gt;
+        &lt;del&gt;Deleted text&lt;/del&gt;
+        &lt;ins&gt;Inserted text&lt;/ins&gt;
+        &lt;sub&gt;Subscript text&lt;/sub&gt;
+        &lt;sup&gt;Superscript text&lt;/sup&gt;
+    </pre>
+    <ul>
+        <li>&lt;strong&gt;: Defines important text (usually bold).</li>
+        <li>&lt;em&gt;: Defines emphasized text (usually italic).</li>
+        <li>&lt;mark&gt;: Highlights text.</li>
+        <li>&lt;small&gt;: Smaller text.</li>
+        <li>&lt;del&gt;: Deleted text.</li>
+        <li>&lt;ins&gt;: Inserted text.</li>
+        <li>&lt;sub&gt;: Subscript text.</li>
+        <li>&lt;sup&gt;: Superscript text.</li>
+    </ul>
+
+    <h2>3. Lists</h2>
+    <h3>Ordered and Unordered Lists</h3>
+    <pre>
+        &lt;ul&gt;
+            &lt;li&gt;Item 1&lt;/li&gt;
+            &lt;li&gt;Item 2&lt;/li&gt;
+        &lt;/ul&gt;
+
+        &lt;ol&gt;
+            &lt;li&gt;First item&lt;/li&gt;
+            &lt;li&gt;Second item&lt;/li&gt;
+        &lt;/ol&gt;
+    </pre>
+    <ul>
+        <li>&lt;ul&gt;: Unordered list (bulleted).</li>
+        <li>&lt;ol&gt;: Ordered list (numbered).</li>
+        <li>&lt;li&gt;: List item.</li>
+    </ul>
+
+    <h3>Description Lists</h3>
+    <pre>
+        &lt;dl&gt;
+            &lt;dt&gt;Term&lt;/dt&gt;
+            &lt;dd&gt;Description of the term.&lt;/dd&gt;
+        &lt;/dl&gt;
+    </pre>
+    <ul>
+        <li>&lt;dl&gt;: Description list.</li>
+        <li>&lt;dt&gt;: Defines a term/name in a description list.</li>
+        <li>&lt;dd&gt;: Describes each term/name.</li>
+    </ul>
+
+    <h2>4. Links and Images</h2>
+    <h3>Hyperlinks</h3>
+    <pre>
+        &lt;a href="https://www.example.com"&gt;Visit Example&lt;/a&gt;
+        &lt;a href="mailto:someone@example.com"&gt;Send Email&lt;/a&gt;
+        &lt;a href="tel:+1234567890"&gt;Call Us&lt;/a&gt;
+        &lt;a href="#section1"&gt;Jump to Section 1&lt;/a&gt;
+    </pre>
+    <ul>
+        <li>&lt;a&gt;: Defines a hyperlink.</li>
+        <li>href: Specifies the URL.</li>
+    </ul>
+
+    <h3>Images</h3>
+    <pre>
+        &lt;img src="image.jpg" alt="Description of image" width="500" height="300"&gt;
+    </pre>
+    <ul>
+        <li>&lt;img&gt;: Embeds an image.</li>
+        <li>src: Path to the image.</li>
+        <li>alt: Alternative text.</li>
+        <li>width and height: Image dimensions.</li>
+    </ul>
+
+    <h2>5. Tables</h2>
+    <pre>
+        &lt;table&gt;
+            &lt;caption&gt;Table Caption&lt;/caption&gt;
+            &lt;thead&gt;
+                &lt;tr&gt;
+                    &lt;th&gt;Header 1&lt;/th&gt;
+                    &lt;th&gt;Header 2&lt;/th&gt;
+                &lt;/tr&gt;
+            &lt;/thead&gt;
+            &lt;tbody&gt;
+                &lt;tr&gt;
+                    &lt;td&gt;Data 1&lt;/td&gt;
+                    &lt;td&gt;Data 2&lt;/td&gt;
+                &lt;/tr&gt;
+            &lt;/tbody&gt;
+            &lt;tfoot&gt;
+                &lt;tr&gt;
+                    &lt;td&gt;Footer 1&lt;/td&gt;
+                    &lt;td&gt;Footer 2&lt;/td&gt;
+                &lt;/tr&gt;
+            &lt;/tfoot&gt;
+        &lt;/table&gt;
+    </pre>
+    <ul>
+        <li>&lt;table&gt;: Defines a table.</li>
+        <li>&lt;caption&gt;: Table caption.</li>
+        <li>&lt;thead&gt;: Groups header content.</li>
+        <li>&lt;tbody&gt;: Groups body content.</li>
+        <li>&lt;tfoot&gt;: Groups footer content.</li>
+        <li>&lt;tr&gt;: Table row.</li>
+        <li>&lt;th&gt;: Table header cell.</li>
+        <li>&lt;td&gt;: Table data cell.</li>
+    </ul>
+
+    <h2>6. Forms</h2>
+    <h3>Basic Form Elements</h3>
+    <pre>
+        &lt;form action="/submit" method="post"&gt;
+            &lt;label for="name"&gt;Name:&lt;/label&gt;
+            &lt;input type="text" id="name" name="name" required&gt;
+            
+            &lt;label for="email"&gt;Email:&lt;/label&gt;
+            &lt;input type="email" id="email" name="email" required&gt;
+            
+            &lt;label for="age"&gt;Age:&lt;/label&gt;
+            &lt;input type="number" id="age" name="age" min="1" max="100"&gt;
+            
+            &lt;input type="submit" value="Submit"&gt;
+        &lt;/form&gt;
+    </pre>
+    <ul>
+        <li>&lt;form&gt;: Defines a form.</li>
+        <li>action: URL to submit the form data.</li>
+        <li>method: HTTP method (GET or POST).</li>
+    </ul>
+
+    <h3>Input Types</h3>
+    <pre>
+        &lt;input type="text" name="username"&gt;
+        &lt;input type="password" name="password"&gt;
+        &lt;input type="email" name="email"&gt;
+        &lt;input type="number" name="quantity"&gt;
+        &lt;input type="date" name="birthday"&gt;
+        &lt;input type="checkbox" name="subscribe" checked&gt;
+        &lt;input type="radio" name="gender" value="male"&gt;
+        &lt;input type="radio" name="gender" value="female"&gt;
+        &lt;input type="range" name="points" min="0" max="10"&gt;
+        &lt;input type="file" name="fileUpload"&gt;
+        &lt;input type="submit" value="Submit"&gt;
+    </pre>
+    <ul>
+        <li>type: Specifies the type of input.</li>
+    </ul>
+
+    <h3>Textareas and Select Menus</h3>
+    <pre>
+        &lt;textarea name="message" rows="4" cols="50"&gt;&lt;/textarea&gt;
+
+        &lt;select name="cars"&gt;
+            &lt;option value="volvo"&gt;Volvo&lt;/option&gt;
+            &lt;option value="saab"&gt;Saab&lt;/option&gt;
+            &lt;option value="mercedes"&gt;Mercedes&lt;/option&gt;
+            &lt;option value="audi"&gt;Audi&lt;/option&gt;
+        &lt;/select&gt;
+    </pre>
+    <ul>
+        <li>&lt;textarea&gt;: Multi-line text input.</li>
+        <li>&lt;select&gt;: Drop-down list.</li>
+        <li>&lt;option&gt;: Options within a drop-down list.</li>
+    </ul>
+
+    <h2>7. Multimedia</h2>
+    <h3>Audio</h3>
+    <pre>
+        &lt;audio controls&gt;
+            &lt;source src="audio.mp3" type="audio/mpeg"&gt;
+            Your browser does not support the audio element.
+        &lt;/audio&gt;
+    </pre>
+    <ul>
+        <li>&lt;audio&gt;: Embeds an audio file.</li>
+        <li>controls: Adds audio controls.</li>
+    </ul>
+
+    <h3>Video</h3>
+    <pre>
+        &lt;video width="320" height="240" controls&gt;
+            &lt;source src="movie.mp4" type="video/mp4"&gt;
+            Your browser does not support the video tag.
+        &lt;/video&gt;
+    </pre>
+    <ul>
+        <li>&lt;video&gt;: Embeds a video file.</li>
+        <li>controls: Adds video controls.</li>
+    </ul>
+
+    <h2>8. Semantic HTML</h2>
+    <p>Semantic elements provide meaning to web content.</p>
+    <pre>
+        &lt;article&gt;
+            &lt;header&gt;
+                &lt;h2&gt;Article Title&lt;/h2&gt;
+            &lt;/header&gt;
+            &lt;p&gt;Article content...&lt;/p&gt;
+            &lt;footer&gt;
+                &lt;p&gt;Author information&lt;/p&gt;
+            &lt;/footer&gt;
+        &lt;/article&gt;
+
+        &lt;aside&gt;
+            &lt;h2&gt;Related Links&lt;/h2&gt;
+            &lt;ul&gt;
+                &lt;li&gt;&lt;a href="#"&gt;Link 1&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#"&gt;Link 2&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/aside&gt;
+
+        &lt;section&gt;
+            &lt;h2&gt;Section Title&lt;/h2&gt;
+            &lt;p&gt;Section content...&lt;/p&gt;
+        &lt;/section&gt;
+
+        &lt;nav&gt;
+            &lt;ul&gt;
+                &lt;li&gt;&lt;a href="#home"&gt;Home&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#about"&gt;About&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#contact"&gt;Contact&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/nav&gt;
+    </pre>
+    <ul>
+        <li>&lt;article&gt;: Represents self-contained content.</li>
+        <li>&lt;aside&gt;: Content aside from the main content.</li>
+        <li>&lt;section&gt;: Defines a section in a document.</li>
+        <li>&lt;nav&gt;: Defines navigation links.</li>
+    </ul>
+
+    <h2>9. Embedded Content</h2>
+    <h3>Iframes</h3>
+    <pre>
+        &lt;iframe src="https://www.example.com" width="600" height="400" title="Example"&gt;&lt;/iframe&gt;
+    </pre>
+    <ul>
+        <li>&lt;iframe&gt;: Embeds another HTML page.</li>
+    </ul>
+
+    <h3>Embedding Scripts</h3>
+    <pre>
+        &lt;script src="script.js"&gt;&lt;/script&gt;
+        &lt;script&gt;
+            console.log('Inline script execution');
+        &lt;/script&gt;
+    </pre>
+    <ul>
+        <li>&lt;script&gt;: Embeds or references an external JavaScript file.</li>
+    </ul>
+
+    <h2>10. Meta Information</h2>
+    <h3>Meta Tags</h3>
+    <pre>
+        &lt;meta charset="UTF-8"&gt;
+        &lt;meta name="description" content="Free Web tutorials"&gt;
+        &lt;meta name="keywords" content="HTML, CSS, JavaScript"&gt;
+        &lt;meta name="author" content="John Doe"&gt;
+        &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    </pre>
+    <ul>
+        <li>&lt;meta&gt;: Provides metadata about the HTML document.</li>
+    </ul>
+
+    <h2>11. Comments</h2>
+    <pre>
+        &lt;!-- This is a comment --&gt;
+        &lt;p&gt;This is visible content.&lt;/p&gt;
+    </pre>
+    <ul>
+        <li>&lt;!-- --&gt;: Defines a comment.</li>
+    </ul>
+
+    <h2>12. Document Object Model (DOM)</h2>
+    <p>The DOM is a programming interface for HTML and XML documents.</p>
+    <h3>Basic DOM Manipulation with JavaScript</h3>
+    <pre>
+        &lt;!DOCTYPE html&gt;
+        &lt;html lang="en"&gt;
+        &lt;head&gt;
+            &lt;meta charset="UTF-8"&gt;
+            &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+            &lt;title&gt;DOM Example&lt;/title&gt;
+        &lt;/head&gt;
+        &lt;body&gt;
+            &lt;h1 id="main-heading"&gt;Hello, World!&lt;/h1&gt;
+            &lt;button onclick="changeText()"&gt;Change Text&lt;/button&gt;
+            &lt;script&gt;
+                function changeText() {
+                    document.getElementById('main-heading').textContent = 'Text Changed!';
+                }
+            &lt;/script&gt;
+        &lt;/body&gt;
+        &lt;/html&gt;
+    </pre>
+    <ul>
+        <li>document.getElementById: Selects an element by its ID.</li>
+        <li>textContent: Changes the text content of an element.</li>
+    </ul>
+</body>
+</html>
