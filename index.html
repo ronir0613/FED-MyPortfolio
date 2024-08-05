@@ -4,11 +4,99 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio Website</title>
+    <link rel="stylesheet" href="styles.css" />
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
     />
-    <link rel="stylesheet" href="styles.css" />
+
+    <style>
+      .tutorials-section {
+        padding: 90px 10%;
+        background: black;
+      }
+
+      .sub-title {
+        text-align: center;
+        margin-bottom: 40px;
+      }
+
+      .sub-title h2 {
+        font-size: 60px;
+        color: white;
+      }
+      .sub-title h2 span {
+        color: #ff7613;
+      }
+
+      .tutorials-list {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        gap: 20px;
+      }
+
+      .tutorial-card {
+        flex: 1 1 30%;
+        max-width: 30%;
+        background: #051129;
+        border-radius: 8px;
+        padding: 20px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease-in-out;
+      }
+
+      .tutorial-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+      }
+
+      .tutorial-card h3 {
+        font-size: 1.5em;
+        color: #ff7613;
+        margin-bottom: 10px;
+      }
+
+      .tutorial-card p {
+        color: white;
+        margin-bottom: 20px;
+        line-height: 1.6;
+      }
+
+      .btn-box {
+        display: inline-block;
+        background: #ff7613;
+        color: #fff;
+        padding: 10px 20px;
+        border-radius: 5px;
+        text-decoration: none;
+        transition: background 0.3s ease-in-out;
+      }
+
+      .btn-box:hover {
+        background: #ff7613;
+      }
+
+      /* Responsive Design */
+      @media (max-width: 768px) {
+        .tutorials-list {
+          flex-direction: column;
+        }
+
+        .tutorial-card {
+          max-width: 100%;
+        }
+      }
+      .about-img {
+        order: -1;
+      }
+
+      .about-img img {
+        max-width: 60%;
+        border-radius: 8px;
+      }
+    </style>
+    <!-- HTML for Header -->
   </head>
   <body>
     <header class="header">
@@ -16,8 +104,11 @@
       <nav class="navbar">
         <a href="#home">Home</a>
         <a href="#about">About</a>
+        <a href="#services">Services</a>
         <a href="#projects">Projects</a>
         <a href="#education">Education</a>
+        <a href="#tutorials">Tutorials</a>
+        <!-- Added this line -->
         <a href="#contact">Contact</a>
         <a href="#feedback">Feedback</a>
       </nav>
@@ -31,16 +122,19 @@
           I'm a web developer. I specialize in creating interactive and
           responsive web applications.
         </p>
-        <a href="#contact" class="btn-box">Hire Me</a>
+        <!-- <a href="#contact" class="btn-box">Hire Me</a> -->
+        <a href="Roni's Resume.pdf" class="btn-box" download
+          >Download My Resume</a
+        >
       </div>
       <div class="home-img">
-        <img src="ronipic.jpg" alt="Your Photo" />
+        <img src="ronipic.jpg" alt="roni" />
       </div>
     </section>
 
     <section id="about" class="about">
       <div class="about-img">
-        <img src="ronipic.jpg" alt="About Me" />
+        <img src="ronipic.jpg" alt="roni" />
       </div>
       <div class="about-text">
         <h2>About <span>Me</span></h2>
@@ -64,6 +158,34 @@
       </div>
     </section>
 
+    <section id="services" class="container">
+      <div class="sub-title">
+        <h2>My <span>Services</span></h2>
+      </div>
+      <div class="services-list">
+        <div>
+          <i class="fas fa-code"></i>
+          <h2>Web Development</h2>
+          <p>
+            I build responsive and dynamic websites using the latest
+            technologies.
+          </p>
+        </div>
+        <div>
+          <i class="fas fa-paint-brush"></i>
+          <h2>UI/UX Design</h2>
+          <p>I design user-friendly interfaces that improve user experience.</p>
+        </div>
+        <div>
+          <i class="fas fa-mobile-alt"></i>
+          <h2>Mobile Development</h2>
+          <p>
+            I create mobile applications that are both functional and beautiful.
+          </p>
+        </div>
+      </div>
+    </section>
+
     <!-- Projects Section -->
     <section id="projects" class="projects">
       <div class="sub-title">
@@ -83,7 +205,7 @@
           <p>Contact Management System</p>
           <p>
             A Complete C++ Based Backend project, where user can manage contact
-            information
+            information.
           </p>
         </div>
         <!-- Add more projects as needed -->
@@ -97,7 +219,7 @@
       <div class="education-list">
         <div class="education-entry">
           <div class="education-text">
-            <h2>SRMAP UNIVERSITY</h2>
+            <h2>SRM UNIVERSITY AP</h2>
             <p>B.Tech in Computer Science and Engineering</p>
             <p>Cum. CGPA 8.20 / 10.0</p>
             <p>Grad. May 2026 | Amaravati, Andhra Pradesh</p>
@@ -131,27 +253,60 @@
       </div>
     </section>
 
-    <section id="contact" class="contact">
-        <div class="contact-text">
-            <h2>Contact <span>Me</span></h2>
-            <p>Feel free to reach out if you have any questions or would like to work with me.</p>
-            <div class="social-links">
-                <a href="https://www.linkedin.com/in/roni06/" target="_blank">
-                    <i class="fab fa-linkedin"></i>
-                </a>
-                <a href="https://github.com/ronir0613" target="_blank">
-                    <i class="fab fa-github"></i>
-                </a>
-            </div>
+    <section id="tutorials" class="tutorials-section">
+      <div class="sub-title">
+        <h2>Why Learn <span>Tutorials</span></h2>
+      </div>
+      <div class="tutorials-list">
+        <div class="tutorial-card">
+          <h3>Why Learn HTML</h3>
+          <p>
+            HTML is the foundation of the web. It is essential for creating
+            structured content and building the framework of web pages.
+          </p>
+          <a href="learn_html.html" class="btn-box" target="_blank"
+            >Learn HTML</a
+          >
         </div>
-        <form class="contact-form">
-            <input type="text" placeholder="Your Name" required />
-            <input type="email" placeholder="Your Email" required />
-            <input type="text" placeholder="Subject" required />
-            <textarea placeholder="Your Message" required></textarea>
-            <button type="submit" class="btn-box">Send Message</button>
-        </form>
+        <div class="tutorial-card">
+          <h3>Why Learn CSS</h3>
+          <p>
+            CSS is crucial for designing and styling web pages. It allows you to
+            create visually appealing and responsive layouts.
+          </p>
+          <a href="learn_css.html" class="btn-box" target="_blank">Learn CSS</a>
+        </div>
+        <div class="tutorial-card">
+          <h3>Why Learn JavaScript</h3>
+          <p>
+            JavaScript brings web pages to life. It enables interactivity and
+            dynamic content, making your websites more engaging and functional.
+          </p>
+          <a href="learn_javaScript.html" class="btn-box" target="_blank"
+            >Learn JavaScript</a
+          >
+        </div>
+      </div>
     </section>
+
+    <section id="contact" class="contact">
+      <div class="contact-text">
+        <h2>Contact <span>Me</span></h2>
+        <h4>Let's work together on your next project.</h4>
+        <p>
+          Feel free to reach out if you have any questions or would like to work
+          with me.
+        </p>
+      </div>
+      <form class="contact-form" action="submit_contact.php" method="POST">
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="email" name="email" placeholder="Your Email" required />
+        <input type="text" name="subject" placeholder="Subject" required />
+        <textarea name="message" placeholder="Your Message" required></textarea>
+        <button type="submit" class="btn-box">Send Message</button>
+      </form>
+    </section>
+
     
 
     <section id="feedback" class="feedback">
@@ -161,7 +316,7 @@
         <h4>Your feedback helps us improve.</h4>
         <p>Please rate your experience and leave your feedback.</p>
       </div>
-      <form class="feedback-form">
+      <form class="feedback-form" action="submit_feedback.php" method="POST">
         <label for="name">Name:</label>
         <input
           type="text"
@@ -180,11 +335,32 @@
           required
         />
 
-        <label for="message">Feedback:</label>
+        <label for="rating">Rating:</label>
+        <div class="rating">
+          <input type="radio" id="star5" name="rating" value="5" />
+          <label for="star5" title="5 stars">&#9733;</label>
+          <input type="radio" id="star4" name="rating" value="4" />
+          <label for="star4" title="4 stars">&#9733;</label>
+          <input type="radio" id="star3" name="rating" value="3" />
+          <label for="star3" title="3 stars">&#9733;</label>
+          <input type="radio" id="star2" name="rating" value="2" />
+          <label for="star2" title="2 stars">&#9733;</label>
+          <input type="radio" id="star1" name="rating" value="1" />
+          <label for="star1" title="1 star">&#9733;</label>
+          <input
+            type="radio"
+            id="star0"
+            name="rating"
+            value="0"
+            checked
+            hidden
+          />
+        </div>
+
+        <label for="feedback">Feedback:</label>
         <textarea
-          id="message"
-          name="message"
-          rows="5"
+          id="feedback"
+          name="feedback"
           placeholder="Your feedback"
           required
         ></textarea>
@@ -193,9 +369,47 @@
       </form>
     </section>
 
-    <!-- Footer Section -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const ratingInputs = document.querySelectorAll(
+          '.rating input[type="radio"]'
+        );
+        let lastChecked = null;
+
+        ratingInputs.forEach((input) => {
+          input.addEventListener("click", function () {
+            if (lastChecked === this) {
+              this.checked = false;
+              lastChecked = document.getElementById("star0");
+            } else {
+              lastChecked = this;
+            }
+          });
+        });
+
+        const form = document.querySelector(".feedback-form");
+        form.addEventListener("submit", function () {
+          if (
+            !Array.from(ratingInputs).some(
+              (input) => input.checked && input.value !== "0"
+            )
+          ) {
+            document.getElementById("star0").checked = true;
+          }
+        });
+      });
+    </script>
+
     <footer class="footer">
-      <p>&copy; 2024 Roni Rapaka. All rights reserved.</p>
+      <div class="social-links">
+        <a href="https://www.linkedin.com/in/roni06/" target="_blank">
+          <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="https://github.com/ronir0613" target="_blank">
+          <i class="fab fa-github"></i>
+        </a>
+      </div>
+      <p>&copy; 2024 Roni Rapaka. All Rights Reserved.</p>
     </footer>
 
     <script src="script.js"></script>
